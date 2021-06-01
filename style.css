@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: azure;
+}
+.menu-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.4);
+}
+.title{
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+.title h3{
+    font-family: 'Cookie', cursive;
+    font-size: 3rem;
+    font-weight: 300;
+    color: rgba(231, 140, 35, 0.8);
+}
+.selection-area{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.selection-area button{
+    display: grid;
+    place-content: center;
+    border: none;
+    outline: none;
+    width: 120px;
+    height: 40px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 40px;
+    font-family: 'Cookie', cursive;
+    font-size: 25px;
+    background-color: rgba(119, 114, 114, 0.2);
+    cursor: pointer;
+}
+.selection-area button:hover{
+    background-color: rgba(231, 140, 35, 0.7);
+    color: #fff;
+}
+.menu-items{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.menu-items .item{
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    transition: all 0.2s ease-in-out;
+}
+.menu-items .item-info{
+    width: 100%;
+    text-align: start;
+}
+.menu-items .item-info header{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(240, 240, 240, 0.2);
+    box-shadow: 0px 0px 3px rgba(120,40,160,0.2);
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Cookie',cursive;
+}
+.title .underline{
+    display: grid;
+    place-content: center;
+    width: 80%;
+    height: 1px;
+    margin-left: 30px;
+    background-color: chocolate;
+}
+.item-info header h4{
+    font-size: 1.7rem;
+    font-weight: 300;
+}
+.item-info header .price{
+    color: rgba(231, 35, 156, 0.8);
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+.item-info .item-desc{
+    padding: 10px;
+    font-size: 1.3rem;
+    text-align: center;
+    box-shadow: 1px 1px 8px rgba(120,40,160,0.2);
+    font-weight: 100;
+    font-family: 'Cookie',cursive;
+}
+.item img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+@media(max-width:1000px){
+    body{
+        padding: 1rem;
+    }
+    .menu-container{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .selection-area{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .selection-area button{
+        margin: 5px;
+        width: 80%;
+        font-size: 20px;
+        padding: 10px;
+
+    }
+    .selection-area button:first-child{
+        margin-top: 10px;
+    }
+    .menu-items{
+        width: 100%;
+        display: grid;
+        place-content: center;
+        align-self: center;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .menu-items .item{
+        width: 100%;
+    }
+}
